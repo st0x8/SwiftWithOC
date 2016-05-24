@@ -7,16 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "SwiftWithOC-Swift.h"
 
 @interface ViewController ()
 
+@property (nonatomic, strong)SwiftItem *item;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.item = [[SwiftItem alloc] init];
+    [self.item setSwiftItemName:@"I am a swift file."];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)swiftMethod:(UIButton *)sender {
+    [self.item runMethod:@"Hello Swift!"];
+}
 @end

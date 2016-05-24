@@ -13,6 +13,9 @@
 		B0191F061CF4147300D72616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0191F041CF4147300D72616 /* Main.storyboard */; };
 		B0191F081CF4147300D72616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0191F071CF4147300D72616 /* Assets.xcassets */; };
 		B0191F0B1CF4147300D72616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0191F091CF4147300D72616 /* LaunchScreen.storyboard */; };
+		B0191F141CF414DE00D72616 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0191F131CF414DE00D72616 /* SwiftViewController.swift */; };
+		B0191F161CF4157300D72616 /* SwiftItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0191F151CF4157300D72616 /* SwiftItem.swift */; };
+		B0191F191CF4159500D72616 /* OCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0191F181CF4159500D72616 /* OCItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		B0191F071CF4147300D72616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0191F0A1CF4147300D72616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0191F0C1CF4147300D72616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0191F121CF414DD00D72616 /* SwiftWithOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftWithOC-Bridging-Header.h"; sourceTree = "<group>"; };
+		B0191F131CF414DE00D72616 /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		B0191F151CF4157300D72616 /* SwiftItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftItem.swift; sourceTree = "<group>"; };
+		B0191F171CF4159500D72616 /* OCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCItem.h; sourceTree = "<group>"; };
+		B0191F181CF4159500D72616 /* OCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +70,16 @@
 				B0191EFF1CF4147300D72616 /* AppDelegate.m */,
 				B0191F011CF4147300D72616 /* ViewController.h */,
 				B0191F021CF4147300D72616 /* ViewController.m */,
+				B0191F131CF414DE00D72616 /* SwiftViewController.swift */,
 				B0191F041CF4147300D72616 /* Main.storyboard */,
+				B0191F151CF4157300D72616 /* SwiftItem.swift */,
+				B0191F171CF4159500D72616 /* OCItem.h */,
+				B0191F181CF4159500D72616 /* OCItem.m */,
 				B0191F071CF4147300D72616 /* Assets.xcassets */,
 				B0191F091CF4147300D72616 /* LaunchScreen.storyboard */,
 				B0191F0C1CF4147300D72616 /* Info.plist */,
 				B0191EFB1CF4147300D72616 /* Supporting Files */,
+				B0191F121CF414DD00D72616 /* SwiftWithOC-Bridging-Header.h */,
 			);
 			path = SwiftWithOC;
 			sourceTree = "<group>";
@@ -149,6 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0191F191CF4159500D72616 /* OCItem.m in Sources */,
+				B0191F161CF4157300D72616 /* SwiftItem.swift in Sources */,
+				B0191F141CF414DE00D72616 /* SwiftViewController.swift in Sources */,
 				B0191F031CF4147300D72616 /* ViewController.m in Sources */,
 				B0191F001CF4147300D72616 /* AppDelegate.m in Sources */,
 				B0191EFD1CF4147300D72616 /* main.m in Sources */,
@@ -265,10 +281,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftWithOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.0x000.SwiftWithOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWithOC/SwiftWithOC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -276,10 +295,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftWithOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.0x000.SwiftWithOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWithOC/SwiftWithOC-Bridging-Header.h";
 			};
 			name = Release;
 		};
