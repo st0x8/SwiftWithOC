@@ -1,11 +1,3 @@
-# SwiftWithOC
----
-title: Swift与Objective-C如何混合使用
-date: 2016-05-24 12:35:10
-tags: iOS
-categories: [Programming Language, iOS]
----
-
 用Swift做开发是必定要与Objective-C（后面简称OC）打交道的。如何在OC中使用Swift呢？反过来，如何在Swfit中使用OC呢？
 
 当你在OC项目中加入Swift文件时，或者在Swift项目中加入OC文件时，Xcode都会有如下提示，请选择创建。
